@@ -1,0 +1,56 @@
+-- create
+CREATE TABLE WEATHER (
+  num INTEGER PRIMARY KEY,
+  day TEXT NOT NULL,
+  datums TEXT NOT NULL,
+  wcond TEXT NOT NULL,
+  temp INTEGER NOT  NULL
+);
+
+-- insert
+INSERT INTO WEATHER VALUES (1, 'monday', '13rd','snowy',-12);
+INSERT INTO WEATHER VALUES (2, 'tuesday', '14th','windy',24);
+INSERT INTO WEATHER VALUES (3, 'wednesday', '15th','rainy',35);
+INSERT INTO WEATHER VALUES (4, 'thursday', '16th','snowy',33);
+INSERT INTO WEATHER VALUES (5, 'friday', '17th','cloudy',-34);
+INSERT INTO WEATHER VALUES (6, 'saturday', '18th','windy',35);
+INSERT INTO WEATHER VALUES (7, 'sunday', '19th','sunny',-37);
+INSERT INTO WEATHER VALUES (8, 'monday', '20th','snowy',12);
+INSERT INTO WEATHER VALUES (9, 'tuesday', '21st','rainy',-24);
+INSERT INTO WEATHER VALUES (10, 'wednesday', '22nd','rainy',-35);
+INSERT INTO WEATHER VALUES (11, 'thursday', '23rd','sunny',33);
+INSERT INTO WEATHER VALUES (12, 'friday', '24th','snowy',-34);
+INSERT INTO WEATHER VALUES (13, 'saturday', '25th','windy',35);
+INSERT INTO WEATHER VALUES (14, 'sunday', '26th','snowy',-37);
+
+DELETE FROM WEATHER WHERE wcond='sunny';
+
+SELECT *FROM WEATHER;
+
+
+-- create
+CREATE TABLE EMPLOYEE (
+  num INTEGER PRIMARY KEY,
+  empid2 INTEGER NOT NULL,
+  firstn TEXT NOT NULL,
+  lastn TEXT NOT NULL,
+  city TEXT NOT NULL,
+  custid INTEGER NOT NULL,
+  place TEXT NOT  NULL
+);
+
+-- insert
+INSERT INTO EMPLOYEE VALUES (1,1, 'thomas(neo)', 'anderson','london',1,'jewelry store');
+INSERT INTO EMPLOYEE VALUES (2,1, 'thomas(neo)', 'anderson','london',2,'bakery');
+INSERT INTO EMPLOYEE VALUES (3,1, 'thomas(neo)', 'anderson','london',3,'cafe');
+INSERT INTO EMPLOYEE VALUES (4,1, 'thomas(neo)', 'anderson','london',4,'restaurant');
+INSERT INTO EMPLOYEE VALUES (5,2, 'agent', 'smith','Cardiff',1,'jewelry store');
+INSERT INTO EMPLOYEE VALUES (6,2, 'agent', 'smith','Cardiff',2,'bakery');
+INSERT INTO EMPLOYEE VALUES (7,2, 'agent', 'smith','Cardiff',3,'cafe');
+INSERT INTO EMPLOYEE VALUES (8,2, 'agent', 'smith','Cardiff',4,'restaurant');
+
+-- SELECT *FROM EMPLOYEE WHERE city = 'london' AND firstn = 'agent';
+-- SELECT *FROM EMPLOYEE WHERE place = 'bakery'
+-- SELECT *FROM EMPLOYEE WHERE custid = 4 AND lastn = "anderson";
+-- SELECT MIN(custid) FROM EMPLOYEE;
+-- SELECT MAX(custid) FROM EMPLOYEE;
